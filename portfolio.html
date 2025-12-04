@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tuan Amirul Izzat | Portfolio</title>
+  <meta name="description" content="Portfolio of Tuan Amirul Izzat, Computer Science (Software Engineering) student focused on web development and leadership." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="theme-dark">
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="brand-mark">TI</div>
+        <div class="brand-text">
+          <span class="eyebrow">Portfolio</span>
+          <span class="brand-name">Tuan Amirul Izzat</span>
+        </div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" data-scroll>About</a>
+        <a href="#skills" data-scroll>Skills</a>
+        <a href="#projects" data-scroll>Projects</a>
+        <a href="#experience" data-scroll>Experience</a>
+        <a href="#leadership" data-scroll>Leadership</a>
+        <a href="#achievements" data-scroll>Achievements</a>
+        <a href="#gallery" data-scroll>Gallery</a>
+        <a href="#contact" data-scroll>Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Toggle theme">☾</button>
+        <a
+          class="primary-btn"
+          href="assets/doc/Resume_Tuan%20Amirul%20Izzat_B.CompSc.pdf"
+          target="_blank"
+          rel="noopener"
+          download
+        >
+          <span class="icon">⇩</span>
+          <span>Resume</span>
+        </a>
+        <button class="icon-button mobile-toggle" id="navToggle" aria-label="Toggle navigation">≡</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Hero -->
+    <section class="section hero-section" id="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="pill-badge">Open to works & collaboration</div>
+          <h1>Hi, I am <span class="accent-text">Tuan Amirul Izzat</span></h1>
+          <h2>Software Engineer</h2>
+          <p class="lead">I build reliable, user-centred web experiences with Java, JSP, MySQL, and modern front-end craft. I pair engineering rigor with design thinking to deliver clear, business-ready outcomes.</p>
+          <div class="meta-row">
+            <span>Machang, Kelantan</span>
+            <span>B.CompSc (Software Engineering) with Honours - Universiti Malaysia Terengganu</span>
+            <span>Expected Graduation: Nov 2026 • CGPA 3.22</span>
+          </div>
+          <div class="cta-row">
+            <a class="primary-btn" href="#contact" data-scroll>
+              <span class="icon">→</span>
+              <span>Let's talk</span>
+            </a>
+            <a class="ghost-btn" href="https://www.linkedin.com/in/tuan-amirul-izzat-bin-tuan-mohd-izani" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="hero-tags">
+            <span class="tag">Java & JSP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">Leadership</span>
+          </div>
+          <div class="social-row">
+            <a class="icon-circle" href="https://www.linkedin.com/in/tuan-amirul-izzat-bin-tuan-mohd-izani" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M20.45 3H3.55C3.24 3 3 3.23 3 3.52v16.96c0 .29.24.52.55.52h16.9c.3 0 .55-.23.55-.52V3.52c0-.29-.25-.52-.55-.52zM8.3 18.38H5.66v-8.1H8.3v8.1zM6.98 9.1c-.83 0-1.36-.55-1.36-1.23 0-.7.54-1.22 1.38-1.22.84 0 1.35.52 1.37 1.22 0 .68-.52 1.23-1.4 1.23zM18.34 18.38h-2.64v-4.52c0-1.07-.38-1.8-1.32-1.8-.72 0-1.14.48-1.33.95-.07.17-.09.4-.09.63v4.74H10.3v-8.1h2.64v1.16c.38-.55.97-1.34 2.36-1.34 1.72 0 3.05 1.1 3.05 3.46v4.82z"/>
+              </svg>
+            </a>
+            <a class="icon-circle" href="https://www.instagram.com/hye.iz?igsh=MWM2aGIxamM2bmo0bg==" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm5 2.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2a2.5 2.5 0 1 0 2.5 2.5A2.5 2.5 0 0 0 12 9.5zm4.35-2.6a1 1 0 1 1-1.1 1.66 1 1 0 0 1 1.1-1.66z"/>
+              </svg>
+            </a>
+            <a class="icon-circle" href="https://wa.me/601137498087" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M4.7 19.7 5.8 16A7.7 7.7 0 1 1 12 19.7c-1.1 0-2.2-.3-3.1-.7l-4.2 1zM7.7 6.8c-.1-.2-.2-.2-.4-.2h-.5c-.1 0-.4 0-.7.3-.2.3-.9.8-.9 2s1 2.4 1.1 2.5c.1.1 1.9 2.9 4.5 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.2-.5 1.4-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.1-.4-.2l-1.3-.6c-.1-.1-.3-.1-.5.1l-.6.7c-.1.1-.3.2-.5.1-.2-.1-1.1-.4-2.1-1.4-.8-.7-1.3-1.6-1.4-1.8-.1-.2 0-.4.1-.5l.3-.3c.1-.1.1-.2.1-.3 0-.1-.1-.3-.1-.4l-.6-1.3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-panel" id="heroPanel">
+          <div class="hero-photo" aria-label="Add your portrait here">Add photo</div>
+          <div class="panel-top">
+            <div>
+              <p class="panel-eyebrow">Live snapshot</p>
+              <p class="panel-title">Building dependable systems & teams</p>
+            </div>
+            <div class="panel-chip">In progress</div>
+          </div>
+          <div class="metrics">
+            <div class="metric">
+              <span class="metric-label">Build</span>
+              <span class="metric-value">3</span>
+              <span class="metric-foot"> academic projects systems</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Leadership</span>
+              <span class="metric-value">President</span>
+              <span class="metric-foot">Kor SISPA UMT</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Awards</span>
+              <span class="metric-value">Gold</span>
+              <span class="metric-foot">Malaysia Tech Expo</span>
+            </div>
+          </div>
+          <div class="progress-card">
+            <div class="progress-head">
+              <span>Degree progress</span>
+              <span>90%</span>
+            </div>
+            <div class="progress-bar"><span class="progress-fill" style="width:90%"></span></div>
+            <p class="progress-foot">Currently advancing software engineering depth and front-end craft.</p>
+          </div>
+          <div class="timeline-mini">
+            <div class="timeline-step">
+              <div class="dot"></div>
+              <div>
+                <p class="step-title">2024–2025: Leading Kor SISPA UMT</p>
+                <p class="step-desc">Driving training, operations, and member welfare.</p>
+              </div>
+            </div>
+            <div class="timeline-step">
+              <div class="dot"></div>
+              <div>
+                <p class="step-title">2022: Gold Medal</p>
+                <p class="step-desc">Malaysia Technology Expo innovation award.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Blending engineering discipline with creative execution</h2>
+        </div>
+        <p class="section-summary">Computer Science (Software Engineering) student at Universiti Malaysia Terengganu with a track record of building Java-based systems, leading uniformed bodies, and earning recognition for innovation.</p>
+      </div>
+      <div class="split-grid">
+        <div class="card focus-card">
+          <h3>What I focus on</h3>
+          <ul>
+            <li>Designing and coding dependable web applications with clear user flows.</li>
+            <li>Turning academic learnings into production-style solutions.</li>
+            <li>Leading teams with clarity, discipline, and service-minded mindset.</li>
+          </ul>
+        </div>
+        <div class="card highlight-card">
+          <div class="stat-block">
+            <span class="stat-number">CGPA 3.22</span>
+            <span class="stat-label">B.CompSc - UMT</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-number">Nov 2026</span>
+            <span class="stat-label">Graduation target</span>
+          </div>
+          <p class="highlight-text">I enjoy pairing clean code with thoughtful UI and measured motion—always keeping stakeholder goals in view.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Skills</p>
+          <h2>Technical stack and teaming strengths</h2>
+        </div>
+        <p class="section-summary">A balanced skill set across Java web development, data handling, and collaborative delivery.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="card skill-card">
+          <h3>Languages & Tools</h3>
+          <div class="pill-row">
+            <span class="pill">Java/Python</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">Canva/Adobe</span>
+            <span class="pill">HTML/CSS/JS</span>
+            <span class="pill">React Native/Expo</span>
+            <span class="pill">Excel/Words/Project</span>
+          </div>
+        </div>
+        <div class="card skill-card">
+          <h3>Strengths</h3>
+          <div class="pill-row">
+            <span class="pill">Web app architecture</span>
+            <span class="pill">Database design</span>
+            <span class="pill">Problem solving</span>
+            <span class="pill">Team leadership</span>
+            <span class="pill">UX thinking</span>
+            <span class="pill">Process optimization</span>
+          </div>
+        </div>
+        <div class="card skill-card">
+          <h3>How I work</h3>
+          <ul class="list">
+            <li>Map requirements to simple, testable flows.</li>
+            <li>Visualize information for clarity and speed of use.</li>
+            <li>Collaborate closely—iterate with feedback and metrics.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Projects</p>
+          <h2>Selected builds and experiments</h2>
+        </div>
+        <p class="section-summary">Academic projects that reflect real-world constraints: data fidelity, user journeys, and operational efficiency.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card project-card">
+          <div class="project-head">
+            <span class="project-title">Electronics Sales System</span>
+            <span class="project-tag">Java • JSP • MySQL</span>
+          </div>
+          <p class="project-body">Custom platform for product listing, price control, stock availability, and payment receipt tracking.</p>
+          <ul class="list">
+            <li>Centralized catalogue management with approval checks.</li>
+            <li>Searchable inventory with quantity and pricing controls.</li>
+            <li>Payment receipt tracking to reduce order disputes.</li>
+          </ul>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-head">
+            <span class="project-title">Real-time Flood Simulation</span>
+            <span class="project-tag">Python • R • Excel</span>
+          </div>
+          <p class="project-body">Data visualization and simulation that converts rainfall measurements into real-time water level predictions.</p>
+          <ul class="list">
+            <li>Ingested live-like rainfall data for fast scenario testing.</li>
+            <li>Produced clear visuals for risk awareness and response.</li>
+            <li>Focused on reliability of data transformations.</li>
+          </ul>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-head">
+            <span class="project-title">Library Book Management System</span>
+            <span class="project-tag">Java • JSP • MySQL</span>
+          </div>
+          <p class="project-body">End-to-end book registration and status tracking to streamline staff workflows.</p>
+          <ul class="list">
+            <li>Automated intake and record keeping for new titles.</li>
+            <li>Status visibility for availability and servicing.</li>
+            <li>Reduced manual errors via structured CRUD flows.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Experience</p>
+          <h2>Real-world delivery and service</h2>
+        </div>
+        <p class="section-summary">From high-visibility event design to civil defence service, I bring discipline and ownership.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-point"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <span class="timeline-title">Graphic Designer — Hal Ehwal Pelajar & Alumni (HEPA) UMT</span>
+              <span class="timeline-meta">Dec 2024 • Anugerah Ikon Siswa 2024</span>
+            </div>
+            <p>Created cohesive visual assets (logos, posters, slides, certificates, banners, backdrops) for a flagship university award event.</p>
+            <ul class="list">
+              <li>Aligned visuals with event objectives and audience needs.</li>
+              <li>Maintained brand consistency across all collateral.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-point"></div>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <span class="timeline-title">Angkatan Pertahanan Awam Malaysia</span>
+              <span class="timeline-meta">Machang, Kelantan • July 2021</span>
+            </div>
+            <p>Supported civil defence operations during emergencies and community incidents.</p>
+            <ul class="list">
+              <li>Responded to natural disasters and wildlife handling (e.g., fallen trees, snakes).</li>
+              <li>Assisted in rescue, first aid, and search-and-rescue efforts.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Volunteering -->
+    <section class="section" id="leadership">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Leadership & Volunteering</p>
+          <h2>Leading with structure, discipline, and care</h2>
+        </div>
+        <p class="section-summary">Active in student leadership and community programs through Kor SISPA UMT.</p>
+      </div>
+      <div class="card-grid two">
+        <article class="card role-card">
+          <div class="role-head">
+            <span class="role-title">President — Kor SISPA UMT</span>
+            <span class="role-meta">Oct 2024 – Oct 2025</span>
+          </div>
+          <p>Lead the uniformed body at university level, coordinating programs and member welfare.</p>
+          <ul class="list">
+            <li>Main liaison for all Kor SISPA meetings and programs.</li>
+            <li>Accountable for member readiness and well-being.</li>
+          </ul>
+        </article>
+
+        <article class="card role-card">
+          <div class="role-head">
+            <span class="role-title">Representative — Kongres Rundingan Mahasiswa</span>
+            <span class="role-meta">April 2025</span>
+          </div>
+          <p>Voiced needs of uniformed students at a university decision-making platform.</p>
+          <ul class="list">
+            <li>Advocated rights and recognition of uniformed units.</li>
+            <li>Elevated visibility at national university level.</li>
+          </ul>
+        </article>
+
+        <article class="card role-card">
+          <div class="role-head">
+            <span class="role-title">Program Director — Kor SISPA Field Training Series 1</span>
+            <span class="role-meta">January 2025</span>
+          </div>
+          <p>Planned and executed field training to build skills and discipline.</p>
+          <ul class="list">
+            <li>Set objectives, timelines, and budgets.</li>
+            <li>Delivered instruction and readiness drills.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section" id="achievements">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Achievements</p>
+          <h2>Recognition for innovation and readiness</h2>
+        </div>
+        <p class="section-summary">Awards across international, national, and university stages.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="card award-card">
+          <div class="award-top">
+            <span class="award-title">Gold Medal — Malaysia Technology Expo</span>
+            <span class="award-meta">International • 2022</span>
+          </div>
+          <p>Innovation project turning trash into perfume products, emphasizing sustainability and creativity.</p>
+        </article>
+
+        <article class="card award-card">
+          <div class="award-top">
+            <span class="award-title">Champion — Civil Defence Skills Challenge</span>
+            <span class="award-meta">National • 2024</span>
+          </div>
+          <p>First place in a national competition focused on civil defence capabilities and teamwork.</p>
+        </article>
+
+        <article class="card award-card">
+          <div class="award-top">
+            <span class="award-title">2nd Place — Uniformed Unit Eco Challenge</span>
+            <span class="award-meta">University • 2023</span>
+          </div>
+          <p>Placed second in an eco-focused competition among university uniformed units.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Gallery</p>
+          <h2>Personal & event visuals</h2>
+        </div>
+        <p class="section-summary">Drop in your portrait and event photos to humanize the story.</p>
+      </div>
+      <div class="card-grid three gallery-grid">
+        <div class="card gallery-card">
+          <div class="gallery-image placeholder" aria-label="Portrait placeholder">Your photo</div>
+          <p class="gallery-caption">Portrait or professional headshot.</p>
+        </div>
+        <div class="card gallery-card">
+          <div class="gallery-image placeholder" aria-label="Event photo placeholder">Event photo</div>
+          <p class="gallery-caption">Kor SISPA UMT activities or leadership moments.</p>
+        </div>
+        <div class="card gallery-card">
+          <div class="gallery-image placeholder" aria-label="Event photo placeholder">Event photo</div>
+          <p class="gallery-caption">Awards or innovation expo visuals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's collaborate</h2>
+        </div>
+        <p class="section-summary">Internships, collaborations, or project discussions—reach out anytime.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="card contact-card simple-contact">
+          <div class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm0 2.2V18h18V7.2l-9 5.4-9-5.4zm1-.9 8 4.8 8-4.8H4z"/>
+              </svg>
+            </span>
+            <a class="contact-value" href="mailto:undftd324@gmail.com">undftd324@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M6.6 2.1 8.8 2a1 1 0 0 1 1 .76l.7 3a1 1 0 0 1-.24.93l-1.3 1.3a11 11 0 0 0 5.1 5.1l1.3-1.3a1 1 0 0 1 .93-.24l3 .7a1 1 0 0 1 .76 1l-.1 2.2a1 1 0 0 1-1 .95A16 16 0 0 1 4.65 3.1a1 1 0 0 1 .95-1Z"/>
+              </svg>
+            </span>
+            <a class="contact-value" href="tel:+601137498087">+60 11-3749 8087</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 2a6 6 0 0 0-6 6c0 4.5 6 12 6 12s6-7.5 6-12a6 6 0 0 0-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+              </svg>
+            </span>
+            <span class="contact-value">Machang, Kelantan • UMT</span>
+          </div>
+          <div class="contact-social">
+            <a class="icon-circle" href="https://www.linkedin.com/in/tuan-amirul-izzat-bin-tuan-mohd-izani" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M20.45 3H3.55C3.24 3 3 3.23 3 3.52v16.96c0 .29.24.52.55.52h16.9c.3 0 .55-.23.55-.52V3.52c0-.29-.25-.52-.55-.52zM8.3 18.38H5.66v-8.1H8.3v8.1zM6.98 9.1c-.83 0-1.36-.55-1.36-1.23 0-.7.54-1.22 1.38-1.22.84 0 1.35.52 1.37 1.22 0 .68-.52 1.23-1.4 1.23zM18.34 18.38h-2.64v-4.52c0-1.07-.38-1.8-1.32-1.8-.72 0-1.14.48-1.33.95-.07.17-.09.4-.09.63v4.74H10.3v-8.1h2.64v1.16c.38-.55.97-1.34 2.36-1.34 1.72 0 3.05 1.1 3.05 3.46v4.82z"/>
+              </svg>
+            </a>
+            <a class="icon-circle" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm5 2.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2a2.5 2.5 0 1 0 2.5 2.5A2.5 2.5 0 0 0 12 9.5zm4.35-2.6a1 1 0 1 1-1.1 1.66 1 1 0 0 1 1.1-1.66z"/>
+              </svg>
+            </a>
+            <a class="icon-circle" href="https://wa.me/601137498087" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M4.7 19.7 5.8 16A7.7 7.7 0 1 1 12 19.7c-1.1 0-2.2-.3-3.1-.7l-4.2 1zM7.7 6.8c-.1-.2-.2-.2-.4-.2h-.5c-.1 0-.4 0-.7.3-.2.3-.9.8-.9 2s1 2.4 1.1 2.5c.1.1 1.9 2.9 4.5 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.2-.5 1.4-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.1-.4-.2l-1.3-.6c-.1-.1-.3-.1-.5.1l-.6.7c-.1.1-.3.2-.5.1-.2-.1-1.1-.4-2.1-1.4-.8-.7-1.3-1.6-1.4-1.8-.1-.2 0-.4.1-.5l.3-.3c.1-.1.1-.2.1-.3 0-.1-.1-.3-.1-.4l-.6-1.3z"/>
+              </svg>
+            </a>
+            <a class="icon-circle" href="https://maps.google.com/?q=Machang%2C%20Kelantan%20UMT" target="_blank" rel="noopener" aria-label="Google Maps">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 2a6.5 6.5 0 0 0-6.5 6.5c0 4.9 6 12.3 6.3 12.7a.4.4 0 0 0 .4.15c.15 0 .3-.06.4-.17.3-.34 6.4-8 6.4-12.68A6.5 6.5 0 0 0 12 2zm0 9.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="card contact-form" id="contactForm">
+          <h3>Quick message</h3>
+          <p class="muted">Sends via your email app (mailto) to undftd324@gmail.com.</p>
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" id="name" required placeholder="Your name" />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" id="email" required placeholder="you@example.com" />
+          </label>
+          <label class="field">
+            <span>Subject</span>
+            <input type="text" name="subject" id="subject" required placeholder="What is this about?" />
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" id="message" rows="3" required placeholder="How can we work together?"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="primary-btn">
+              <span class="icon">→</span>
+              <span>Send draft</span>
+            </button>
+            <span class="form-note" id="formSuccess" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Tuan Amirul Izzat. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="#top" data-scroll>Back to top</a>
+      <a href="#projects" data-scroll>Projects</a>
+      <a href="#experience" data-scroll>Experience</a>
+      <a href="#achievements" data-scroll>Achievements</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
