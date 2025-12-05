@@ -263,8 +263,8 @@ body.theme-light .nav-links a.active {
 }
 
 section#contact .section-summary {
-  max-width: none;
-  white-space: nowrap;
+  max-width: 600px;
+  white-space: normal;
 }
 
 .eyebrow {
@@ -785,6 +785,138 @@ textarea:focus {
 .form-note {
   color: var(--muted);
   font-size: 12px;
+}
+
+.social-connect {
+  display: grid;
+  gap: 12px;
+}
+
+.social-intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  perspective: 1000px;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 210px;
+  height: 80px;
+  padding: 14px 18px;
+  position: relative;
+  text-decoration: none;
+  background: #fff;
+  color: #262626;
+  transform: rotate(-30deg) skew(25deg) translate(0, 0);
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease, color 0.35s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.social-card::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: var(--tile-side, #b1b1b1);
+  transform: rotate(0deg) skewY(-45deg);
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+
+.social-card::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transform: rotate(0deg) skewX(-45deg);
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+
+.social-card:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 40px rgba(0, 0, 0, 0.45);
+  color: #fff;
+}
+
+.social-card .icon-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+.social-text {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.social-card.email {
+  background: #f3f4f6;
+  color: #1f2937;
+  --tile-side: #d7d9de;
+}
+
+.social-card.whatsapp {
+  background: #25d366;
+  color: #0a3018;
+  --tile-side: #199d4d;
+}
+
+.social-card.instagram {
+  background: #e4405f;
+  color: #ffffff;
+  --tile-side: #c12f50;
+}
+
+.social-card.linkedin {
+  background: #0a66c2;
+  color: #ffffff;
+  --tile-side: #084d96;
+}
+
+@media (max-width: 1100px) {
+  .social-list {
+    justify-content: flex-start;
+  }
 }
 
 .site-footer {
