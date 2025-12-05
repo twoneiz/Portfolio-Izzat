@@ -312,6 +312,63 @@ section#contact .section-summary {
   margin: 14px 0;
 }
 
+.hero-roles {
+  margin: 0 0 8px;
+  font-size: clamp(22px, 4vw, 30px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-rotator {
+  position: relative;
+  --role-height: 1.25em;
+  height: var(--role-height);
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.role-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: roleSlide 10s infinite;
+}
+
+.role-track span {
+  display: block;
+  height: var(--role-height);
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+@keyframes roleSlide {
+  0%,
+  18% {
+    transform: translateY(0);
+  }
+  25%,
+  43% {
+    transform: translateY(calc(-1 * var(--role-height)));
+  }
+  50%,
+  68% {
+    transform: translateY(calc(-2 * var(--role-height)));
+  }
+  75%,
+  93% {
+    transform: translateY(calc(-3 * var(--role-height)));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .accent-text {
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
@@ -325,8 +382,8 @@ section#contact .section-summary {
 
 .meta-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 8px;
+  grid-template-columns: 1fr;
+  gap: 4px;
   color: var(--muted);
   margin: 14px 0;
   font-size: 13px;
@@ -474,8 +531,17 @@ section#contact .section-summary {
 .progress-fill {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.18) 0 12px,
+      rgba(255, 255, 255, 0.05) 12px 24px
+    ),
+    linear-gradient(120deg, var(--accent), var(--accent-2), var(--accent));
+  background-size: 28px 28px, 200% 100%;
+  background-position: 0 0, 0% 50%;
   border-radius: 999px;
+  animation: progressFlow 1s linear infinite;
 }
 
 .progress-foot {
@@ -484,42 +550,13 @@ section#contact .section-summary {
   font-size: 12px;
 }
 
-.timeline-mini {
-  display: grid;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.timeline-step {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 10px;
-  align-items: center;
-}
-
-.timeline-step .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.16);
-}
-
-.step-title {
-  margin: 0;
-  font-weight: 600;
-}
-
-.step-desc {
-  margin: 2px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.split-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
+@keyframes progressFlow {
+  0% {
+    background-position: 0 0, 0% 50%;
+  }
+  100% {
+    background-position: 28px 0, 200% 50%;
+  }
 }
 
 .card {
