@@ -243,6 +243,65 @@ body.theme-light .nav-links a.active {
   margin-top: 70px;
 }
 
+#about .about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.9fr);
+  gap: 12px;
+  align-items: start;
+  margin: 10px 0 26px;
+}
+
+#about .about-text {
+  display: grid;
+  max-width: 760px;
+}
+
+#about .about-text .split-grid {
+  margin-top: 6px;
+}
+
+#about .about-text .section-summary {
+  max-width: 100%;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+#about .about-visual {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: transparent;
+  padding: 0;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
+  height: 90%;
+  width: auto;
+  margin-left: 16px;
+}
+
+#about .about-visual img {
+  height: 90%;
+  width: auto;
+  max-width: 420px;
+  border-radius: 18px;
+  border: none;
+  box-shadow: none;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  #about .about-intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 18px;
+  }
+
+  #about .about-visual {
+    justify-content: center;
+  }
+}
+
 .section-head {
   display: flex;
   align-items: flex-end;
@@ -282,16 +341,22 @@ section#contact .section-summary {
 }
 
 .hero-photo {
-  width: 110px;
-  height: 110px;
-  border-radius: 22px;
+  width: 100%;
+  border-radius: 18px;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(34, 197, 94, 0.12));
-  border: 1px dashed var(--border);
+  border: 1px solid var(--border);
   color: var(--muted);
   font-weight: 600;
-  display: grid;
-  place-items: center;
+  display: block;
+  overflow: hidden;
   margin-bottom: 12px;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  display: block;
 }
 
 .pill-badge {
