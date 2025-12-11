@@ -245,7 +245,8 @@ body.theme-light .nav-links a.active {
 
 #about .about-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.9fr);
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.3fr);
+  grid-template-areas: "visual text";
   gap: 12px;
   align-items: start;
   margin: 10px 0 0;
@@ -254,6 +255,8 @@ body.theme-light .nav-links a.active {
 #about .about-text {
   display: grid;
   max-width: 760px;
+  grid-area: text;
+  align-self: start;
 }
 
 #about .about-text .split-grid {
@@ -275,19 +278,20 @@ body.theme-light .nav-links a.active {
   border-radius: 20px;
   border: none;
   box-shadow: none;
-  height: 90%;
-  width: auto;
-  margin: auto;
+  margin: 0;
+  align-self: start;
+  grid-area: visual;
 }
 
 #about .about-visual img {
-  height: 90%;
-  width: auto;
-  max-width: 420px;
+  width: 100%;
+  height: auto;
+  max-width: 360px;
   border-radius: 18px;
   border: none;
   box-shadow: none;
   display: block;
+  margin: auto;
 }
 
 @media (max-width: 900px) {
@@ -295,6 +299,9 @@ body.theme-light .nav-links a.active {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 18px;
+    grid-template-areas:
+      "visual"
+      "text";
   }
 
   #about .about-visual {
@@ -809,6 +816,12 @@ body.theme-light .skill-circle {
   height: 100%;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .gallery-grid .gallery-image {
   width: 100%;
   height: 180px;
@@ -859,6 +872,18 @@ body.theme-light .skill-circle {
 
 .project-body {
   color: var(--text);
+}
+
+.project-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.project-actions .primary-btn,
+.project-actions .ghost-btn {
+  padding: 8px 14px;
 }
 
 .timeline {
