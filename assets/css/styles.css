@@ -277,7 +277,7 @@ body.theme-light .nav-links a.active {
   box-shadow: none;
   height: 90%;
   width: auto;
-  margin-left: 16px;
+  margin: auto;
 }
 
 #about .about-visual img {
