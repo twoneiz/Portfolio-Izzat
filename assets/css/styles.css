@@ -414,7 +414,7 @@ section#contact .section-summary {
   align-items: center;
   line-height: 1.2;
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   font-weight: 700;
 }
@@ -443,7 +443,7 @@ section#contact .section-summary {
 
 .accent-text {
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
