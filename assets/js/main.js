@@ -153,4 +153,134 @@
       formSuccess.textContent = 'Draft opened in your email client.';
     });
   }
+
+  // Skills: bouncing icons
+  const skillsStage = document.querySelector('.skills-stage');
+  const skillCircles = skillsStage ? Array.from(skillsStage.querySelectorAll('.skill-circle')) : [];
+
+  if (skillsStage && skillCircles.length) {
+    const nodes = [];
+    const padding = 6;
+
+    const stageRect = () => ({
+      width: skillsStage.clientWidth,
+      height: skillsStage.clientHeight,
+    });
+
+    const randomBetween = (min, max) => Math.random() * (max - min) + min;
+
+    function placeCircles() {
+      nodes.length = 0;
+      const { width, height } = stageRect();
+
+      skillCircles.forEach((circle) => {
+        const size = circle.getBoundingClientRect().width || 80;
+        let x;
+        let y;
+        let tries = 0;
+        let ok = false;
+
+        while (!ok && tries < 150) {
+          x = randomBetween(padding, width - size - padding);
+          y = randomBetween(padding, height - size - padding);
+          ok = nodes.every((n) => {
+            const dx = (n.x + n.size / 2) - (x + size / 2);
+            const dy = (n.y + n.size / 2) - (y + size / 2);
+            const dist = Math.hypot(dx, dy);
+            return dist > (n.size + size) / 2 + 8;
+          });
+          tries++;
+        }
+
+        nodes.push({
+          el: circle,
+          size,
+          x,
+          y,
+          vx: randomBetween(-1.2, 1.2) || 0.6,
+          vy: randomBetween(-1.2, 1.2) || 0.6,
+        });
+
+        circle.style.left = '0px';
+        circle.style.top = '0px';
+      });
+    }
+
+    function bounceWalls(node, bounds) {
+      if (node.x <= padding) {
+        node.x = padding;
+        node.vx = Math.abs(node.vx);
+      } else if (node.x + node.size >= bounds.width - padding) {
+        node.x = bounds.width - padding - node.size;
+        node.vx = -Math.abs(node.vx);
+      }
+
+      if (node.y <= padding) {
+        node.y = padding;
+        node.vy = Math.abs(node.vy);
+      } else if (node.y + node.size >= bounds.height - padding) {
+        node.y = bounds.height - padding - node.size;
+        node.vy = -Math.abs(node.vy);
+      }
+    }
+
+    function handleCollisions(nodes) {
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const a = nodes[i];
+          const b = nodes[j];
+          const dx = (b.x + b.size / 2) - (a.x + a.size / 2);
+          const dy = (b.y + b.size / 2) - (a.y + a.size / 2);
+          const dist = Math.hypot(dx, dy) || 0.0001;
+          const minDist = (a.size + b.size) / 2 + 2;
+
+          if (dist < minDist) {
+            const overlap = minDist - dist;
+            const nx = dx / dist;
+            const ny = dy / dist;
+
+            // push apart
+            a.x -= (nx * overlap) / 2;
+            a.y -= (ny * overlap) / 2;
+            b.x += (nx * overlap) / 2;
+            b.y += (ny * overlap) / 2;
+
+            // swap normal velocity components (elastic, equal mass)
+            const va = a.vx * nx + a.vy * ny;
+            const vb = b.vx * nx + b.vy * ny;
+            const diff = va - vb;
+
+            a.vx -= diff * nx;
+            a.vy -= diff * ny;
+            b.vx += diff * nx;
+            b.vy += diff * ny;
+          }
+        }
+      }
+    }
+
+    placeCircles();
+
+    let last = 0;
+    function tick(ts) {
+      if (!last) last = ts;
+      const dt = Math.min((ts - last) / 16, 2); // normalize to ~60fps and clamp
+      last = ts;
+
+      const bounds = stageRect();
+      handleCollisions(nodes);
+
+      nodes.forEach((n) => {
+        n.x += n.vx * dt;
+        n.y += n.vy * dt;
+        bounceWalls(n, bounds);
+        n.el.style.transform = `translate3d(${n.x}px, ${n.y}px, 0)`;
+      });
+
+      requestAnimationFrame(tick);
+    }
+
+    window.addEventListener('resize', placeCircles);
+    requestAnimationFrame(tick);
+  }
 })();
