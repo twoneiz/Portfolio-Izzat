@@ -156,9 +156,9 @@
 
   // Skills: bouncing icons
   const skillsStage = document.querySelector('.skills-stage');
-  const skillCircles = skillsStage ? Array.from(skillsStage.querySelectorAll('.skill-circle')) : [];
+  const allSkillCircles = skillsStage ? Array.from(skillsStage.querySelectorAll('.skill-circle')) : [];
 
-  if (skillsStage && skillCircles.length) {
+  if (skillsStage && allSkillCircles.length) {
     const nodes = [];
     const padding = 6;
 
@@ -169,12 +169,17 @@
 
     const randomBetween = (min, max) => Math.random() * (max - min) + min;
 
+    const visibleCircles = () =>
+      allSkillCircles.filter((el) => window.getComputedStyle(el).display !== 'none');
+
     function placeCircles() {
       nodes.length = 0;
       const { width, height } = stageRect();
+      const activeCircles = visibleCircles();
+      if (!activeCircles.length) return;
 
-      skillCircles.forEach((circle) => {
-        const size = circle.getBoundingClientRect().width || 80;
+      activeCircles.forEach((circle) => {
+        const size = circle.getBoundingClientRect().width || 60;
         let x;
         let y;
         let tries = 0;

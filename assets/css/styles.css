@@ -732,25 +732,8 @@ body.theme-light .skill-circle {
 @media (max-width: 768px) {
   .skills-stage {
     width: 100%;
-    height: 300px;
+    height: 260px;
     margin-top: 14px;
-  }
-
-  .skill-circle {
-    width: 70px;
-    height: 70px;
-  }
-
-  .skill-circle img {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 3px;
-  }
-}
-
-@media (max-width: 520px) {
-  .skills-stage {
-    height: 240px;
   }
 
   .skill-circle {
@@ -761,6 +744,30 @@ body.theme-light .skill-circle {
   .skill-circle img {
     width: 28px;
     height: 28px;
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 520px) {
+  .skills-stage {
+    height: 210px;
+  }
+
+  .skill-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .skill-circle img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* hide extra icons to reduce crowding on small screens */
+  .skills-stage .skill-circle:nth-child(n + 13) {
+    display: none;
   }
 }
 
