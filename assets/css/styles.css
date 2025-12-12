@@ -480,6 +480,16 @@ section#contact .section-summary {
   margin-top: 12px;
 }
 
+.social-row .icon-circle {
+  width: 42px;
+  height: 42px;
+}
+
+.social-row .icon-circle .icon-svg {
+  width: 18px;
+  height: 18px;
+}
+
 .icon-circle {
   width: 34px;
   height: 34px;
